@@ -114,13 +114,54 @@ h1 {
 .fade-slide-text {
   opacity: 0; /* start invisible */
   transform: translateY(-100%); /* start off-screen to the top */
-  animation: slideFadeIn 2s ease-out forwards;
+}
+.fade-slide-text.animate {
+  animation: slideFadeIn 1s forwards;
+  animation-delay: 0.5s; /* delay before animation starts */
 }
 
 @keyframes slideFadeIn {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+/* Base state so buttons do not load first in final position, they are invisible until animate class is triggered*/
+.btn-slide {
+  opacity: 0;
+  transform: translateY(100%); /* off-screen at bottom */
+}
+
+/* Slide from bottom-left */
+.btn-slide-left.animate {
+  animation: slideFromBottomLeft 1.2s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes slideFromBottomLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-100%, 100%); /* bottom-left corner */
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); /* final position */
+  }
+}
+/* Slide from bottom-right */
+.btn-slide-right.animate {
+  animation: slideFromBottomRight 1.2s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes slideFromBottomRight {
+  0% {
+    opacity: 0;
+    transform: translate(100%, 100%); /* bottom-right corner */
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); /* final position */
   }
 }
 

@@ -126,18 +126,24 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h1 class="fade-slide-text">Welcome to WeMagazine</h1>
+            <h1 class="fade-slide-text animate">Welcome to WeMagazine</h1>
           </div>
           <div class="col-12">
-            <p class="lead fade-slide-text">Where We Write</p>
+            <p class="lead fade-slide-text animate">Where We Write</p>
           </div>
           <div class="col-6 col-md-4 d-flex justify-content-center offset-md-2">
-            <button type="button" class="btn btn-custom-filled mt-5">
+            <button
+              type="button"
+              class="btn btn-custom-filled mt-5 btn-slide btn-slide-left animate"
+            >
               Read now
             </button>
           </div>
           <div class="col-6 col-md-4 d-flex justify-content-center">
-            <button type="button" class="btn btn-custom-filled mt-5">
+            <button
+              type="button"
+              class="btn btn-custom-filled mt-5 btn-slide btn-slide-right animate"
+            >
               Write now
             </button>
           </div>
@@ -174,8 +180,19 @@
             }
           });
         });
+      //slows down video playback speed
       const video = document.getElementById("hero-video");
       video.playbackRate = 0.7;
+      // Animation for text starts only when video loads
+      const video = document.getElementById("hero-video");
+      const texts = document.querySelectorAll(".fade-slide-text");
+      const button_right = document.querySelector(".btn-slide-right");
+      const button_left = document.querySelector(".btn-slide-left");
+      video.addEventListener("loadeddata", () => {
+        texts.forEach((el) => el.classList.add("animate"));
+        button_right.classList.add("animate");
+        button_left.classList.add("animate");
+      });
     </script>
   </body>
 </html>
