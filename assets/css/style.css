@@ -315,3 +315,15 @@ main {
     font-size: 3.5rem;
   }
 }
+
+@media screen and (min-width: 1200px) {
+  #about-us-paragraph {
+    padding-right: 10px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #about-us-paragraph {
+    padding-right: 24px;
+  }
+}
