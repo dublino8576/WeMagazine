@@ -162,7 +162,7 @@ h1 {
 /* Slide from bottom-left */
 .btn-slide-left.animate {
   animation: slideFromBottomLeft 1.2s ease-out forwards;
-  animation-delay: 0.5s;
+  animation-delay: 1.5s;
 }
 
 @keyframes slideFromBottomLeft {
@@ -178,7 +178,7 @@ h1 {
 /* Slide from bottom-right */
 .btn-slide-right.animate {
   animation: slideFromBottomRight 1.2s ease-out forwards;
-  animation-delay: 0.5s;
+  animation-delay: 1.5s;
 }
 
 @keyframes slideFromBottomRight {
@@ -215,6 +215,8 @@ h1 {
   text-align: justify;
 }
 
+/* Carousel */
+
 .carousel-inner {
   border-radius: 2%;
 }
@@ -248,7 +250,7 @@ h1 {
   justify-content: center;
   font-weight: 900;
   font-size: 3rem;
-  /* Positioning the number at the top center of the carousel */
+  /* Positioning the number at the top  of the carousel */
   position: absolute;
   top: 10%;
   left: 10%;
@@ -289,9 +291,6 @@ main {
     position: relative;
     right: 3px;
   }
-}
-
-@media screen and (min-width: 768px) {
 }
 
 @media screen and (min-width: 992px) {
