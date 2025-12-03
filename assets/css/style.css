@@ -215,9 +215,6 @@ h1 {
   text-align: justify;
 }
 
-#about-us .carousel {
-  opacity: 0.9;
-}
 .carousel-inner {
   border-radius: 2%;
 }
@@ -268,8 +265,23 @@ main {
     display: none;
   }
   /* On smaller screens shows steps in carousel caption*/
-  .carousel-caption p::before {
+  #first-caption p::before {
     content: "1";
+  }
+
+  #second-caption p::before {
+    content: "2";
+  }
+
+  #third-caption p::before {
+    content: "3";
+  }
+
+  #fourth-caption p::before {
+    content: "4";
+  }
+
+  .carousel-caption p::before {
     color: var(--primary-color);
     margin-right: 2px;
     font-weight: 900;
