@@ -153,8 +153,8 @@
     <main>
       <section id="about-us" class="container my-5">
         <div class="row">
-          <div class="col-12 col-md-8 text-center">
-            <h2 class="work-sans-normal">About us</h2>
+          <div class="col-12 col-md-8 col-lg-6 text-center text-md-start mb-3">
+            <h2 class="work-sans-normal mb-3">About us</h2>
             <p class="body-text">
               <span>W</span>e<span>M</span>agazine is a space where every voice
               matters. Built for the people and powered by the people, our
@@ -167,7 +167,105 @@
           </div>
           <div class="col-md-4"></div>
           <div class="col-md-4"></div>
-          <div class="col-12 col-md-8 text-center">Carousel</div>
+          <div class="col-12 col-md-8 col-lg-6">
+            <h2 id="carousel-heading" class="work-sans-normal mb-3 text-md-end">
+              Become our author
+            </h2>
+            <div
+              id="carouselExampleCaptions"
+              class="carousel overlay-carousel slide text-center"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="image-wrapper">
+                    <div
+                      aria-label="number 1"
+                      class="carousel-steps work-sans-normal"
+                    >
+                      1
+                    </div>
+                    <img
+                      src="assets/images/woman_writing_on_desk.webp"
+                      class="d-block w-100"
+                      alt="woman writing an article on a wooden desk"
+                    />
+                  </div>
+                  <div class="carousel-caption d-block">
+                    <p>
+                      Go to our post article form to insert your article in the
+                      text area!
+                    </p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="..." class="d-block w-100" alt="..." />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>
+                      Some representative placeholder content for the second
+                      slide.
+                    </p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="..." class="d-block w-100" alt="..." />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>
+                      Some representative placeholder content for the third
+                      slide.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
     </main>
