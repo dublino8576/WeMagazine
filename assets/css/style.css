@@ -36,7 +36,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Work Sans", sans-serif;
+  font-family: var(--font-family-heading);
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1.2;
@@ -195,19 +195,124 @@ h1 {
 /* Main Content */
 
 /*About us section*/
+
+#about-us .col-md-4 {
+  visibility: hidden;
+}
+
 #about-us span {
   font-weight: 700;
   font-size: 1.2rem;
   color: var(--primary-color);
 }
+
 #about-us span:nth-last-of-type(1) {
   color: var(--accent-color);
 }
+
 .body-text {
   font-size: 1rem;
   text-align: justify;
 }
+
+.carousel-inner {
+  border-radius: 2%;
+}
+
+#about-us .overlay-carousel .carousel-caption {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%; /*So that carousel steps are positioned fixed to their corresponding image */
+  height: 100%;
+}
+
+.carousel-steps {
+  background: linear-gradient(
+    to bottom right,
+    var(--primary-color) 20%,
+    var(--accent-color) 80%
+  );
+
+  color: var(--text-color-light);
+  border-radius: 50%;
+  border: 2px solid var(--accent-color);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 3rem;
+  /* Positioning the number at the top center of the carousel */
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
 main {
   min-height: 80vh;
   width: 100%;
+}
+
+/* Media Queries */
+@media screen and (max-width: 576px) {
+  .carousel-steps {
+    display: none;
+  }
+  /* On smaller screens shows steps in carousel caption*/
+  #first-caption p::before {
+    content: "1";
+  }
+
+  #second-caption p::before {
+    content: "2";
+  }
+
+  #third-caption p::before {
+    content: "3";
+  }
+
+  #fourth-caption p::before {
+    content: "4";
+  }
+
+  .carousel-caption p::before {
+    color: var(--primary-color);
+    margin-right: 2px;
+    font-weight: 900;
+    font-size: 1.7rem;
+    position: relative;
+    right: 3px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 992px) {
+  #about-us .col-md-4 {
+    display: none;
+  }
+
+  #about-us .col-lg-6 {
+    /* moves about us section in the middle of carousel height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #about-us .col-lg-6 #carousel-heading {
+    display: none;
+  }
+
+  .carousel-steps {
+    height: 75px;
+    width: 75px;
+    font-size: 3.5rem;
+  }
 }
