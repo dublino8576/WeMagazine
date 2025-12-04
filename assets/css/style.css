@@ -293,7 +293,7 @@ footer nav .social-links-footer {
   gap: 4%;
 }
 footer hr {
-  width: 30%;
+  width: 60px;
   margin-left: auto;
   margin-right: auto;
   color: black;
@@ -323,9 +323,14 @@ i:hover {
 
 .hr-separator {
   padding: 0 5px;
-  width: 1px; /* thickness */
-  height: 15px; /* length */
+  width: 1px;
+  height: 15px;
   color: black;
+}
+
+footer small a {
+  color: var(--text-color-dark);
+  font-size: 0.6rem;
 }
 
 /* Media Queries */
@@ -421,6 +426,15 @@ i:hover {
   #about-us-paragraph {
     padding-right: 10px;
   }
+
+  /*Footer*/
+  footer .logo-container img {
+    width: 50%;
+  }
+
+  .social-links-footer i {
+    font-size: 1.6rem;
+  }
 }
 
 @media screen and (min-width: 1400px) {
@@ -429,6 +443,10 @@ i:hover {
   }
 
   /* Footer */
+
+  footer .logo-container img {
+    width: 40%;
+  }
 
   .hr-separator {
     visibility: visible;
