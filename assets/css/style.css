@@ -53,6 +53,10 @@ h3 {
   font-weight: 500;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Buttons */
 .btn-custom-filled {
   background-color: #ff7c00;
@@ -288,9 +292,17 @@ footer nav .social-links-footer {
   justify-content: center;
   gap: 4%;
 }
+footer hr {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+}
 .social-links-footer i {
   font-size: 1.2rem; /* font size for icon sizing */
 }
+.secondary-links a,
+.tertiary-links a,
 i {
   color: var(--accent-color);
   transition: transform 0.25s ease, opacity 0.25s ease;
@@ -302,12 +314,17 @@ i {
  */
 }
 
+.secondary-links a:hover,
+.tertiary-links a:hover,
 i:hover {
   transform: scale(1.15);
   opacity: 1;
 }
 
 /* Media Queries */
+@media screen and (max-width: 520px) {
+}
+
 @media screen and (max-width: 576px) {
   .carousel-steps {
     display: none;
@@ -336,6 +353,26 @@ i:hover {
     font-size: 1.7rem;
     position: relative;
     right: 3px;
+  }
+
+  /* Footer */
+}
+
+@media screen and (max-width: 767px) {
+  /* Footer */
+  .hr-separator {
+    display: none;
+  }
+  .tertiary-links a,
+  .secondary-links a {
+    display: block;
+    width: 70%; /* decreases div container size so it doesn't become bigger than full viewport width when it scales up during hovering */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .secondary-links a:not(:nth-last-of-type(1)),
+  .tertiary-links a:not(:nth-last-of-type(1)) {
+    padding-bottom: 5px;
   }
 }
 
