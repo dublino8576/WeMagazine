@@ -329,21 +329,23 @@
         <h2 class="work-sans-normal text-center mb-3">Topics</h2>
         <div id="topics-wrapper">
           <div class="overlay-image-topics my-3">
-            <h3 class="work-sans-normal">History</h3>
+            <a href=""> <h3 class="work-sans-normal">History</h3></a>
             <img
               src="assets/images/history.webp"
               alt="globe with old books on a desk "
             />
           </div>
           <div class="overlay-image-topics my-3">
-            <h3 class="work-sans-normal">Wellness & Fitness</h3>
+            <a href="#">
+              <h3 class="work-sans-normal">Wellness & Fitness</h3></a
+            >
             <img
               src="assets/images/wellness&sport.webp"
               alt="Man doing headstand"
             />
           </div>
           <div class="overlay-image-topics mt-3">
-            <h3 class="work-sans-normal">Daily Hacks</h3>
+            <a href="#"> <h3 class="work-sans-normal">Daily Hacks</h3></a>
             <img
               src="assets/images/tip&tricks.webp"
               alt="Woman sat on the bed checking paper bills by a laptop"
@@ -454,14 +456,33 @@
       const video = document.getElementById("hero-video");
       video.playbackRate = 0.7;
       // Animation for text starts only when video loads
-      const video = document.getElementById("hero-video");
+
       const texts = document.querySelectorAll(".fade-slide-text");
       const button_right = document.querySelector(".btn-slide-right");
       const button_left = document.querySelector(".btn-slide-left");
       video.addEventListener("loadeddata", () => {
         texts.forEach((el) => el.classList.add("animate"));
+        console.log("animate");
         button_right.classList.add("animate");
         button_left.classList.add("animate");
+      });
+
+      //Triggers Animation topics by adding visible state on
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        {
+          threshold: 0.2, // trigger when 20% of element is visible
+        }
+      );
+      console.log("i am her");
+      document.querySelectorAll(".overlay-image-topics").forEach((el) => {
+        observer.observe(el);
       });
     </script>
   </body>
