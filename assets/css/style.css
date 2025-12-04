@@ -321,6 +321,13 @@ i:hover {
   opacity: 1;
 }
 
+.hr-separator {
+  padding: 0 5px;
+  width: 1px; /* thickness */
+  height: 15px; /* length */
+  color: black;
+}
+
 /* Media Queries */
 @media screen and (max-width: 520px) {
 }
@@ -376,6 +383,17 @@ i:hover {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .secondary-links a,
+  .tertiary-links a {
+    display: inline-block;
+  }
+
+  .hr-separator {
+    visibility: hidden;
+  }
+}
+
 @media screen and (min-width: 992px) {
   #about-us .col-md-4 {
     display: none;
@@ -408,5 +426,12 @@ i:hover {
 @media screen and (min-width: 1400px) {
   #about-us-paragraph {
     padding-right: 24px;
+  }
+
+  /* Footer */
+
+  .hr-separator {
+    visibility: visible;
+    padding: 0 12px;
   }
 }
