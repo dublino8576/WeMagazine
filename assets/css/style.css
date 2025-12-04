@@ -261,6 +261,63 @@ h1 {
   left: 10%;
 }
 
+/* Topics section */
+#topics-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+#topics-wrapper img {
+  width: 100%;
+
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.overlay-image-topics {
+  position: relative;
+  display: flex;
+  justify-content: center; /* move h3 to center */
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 2s ease-out, transform 2s ease-out;
+  /* opacity and transform will be triggered from below and put their value on this transition */
+}
+/* visible state is used for animations that activate when element becomes visible in the user viewport (in this case 20% of element must be visible) */
+.overlay-image-topics.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.overlay-image-topics a {
+  position: absolute; /* moves h3 halway on y-axis */
+  z-index: 3;
+  top: 50%;
+  text-align: center;
+}
+
+.overlay-image-topics::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: black;
+  mix-blend-mode: multiply; /* darkening effect making the overlay more cinematic blend with the image */
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* hover state for topic image title once visible */
+.overlay-image-topics.visible h3 {
+  color: var(--text-color-light);
+  font-weight: 900;
+  transition: transform 1s ease;
+}
+
+.overlay-image-topics.visible h3:hover {
+  transform: scale(1.05);
+}
+
 /* Footer */
 
 footer {
