@@ -15,6 +15,7 @@
 :root {
   --primary-color: #ff7c00;
   --secondary-color: #acc8d7;
+  --secondary-color-dark: #85a5b6;
   --background-color: rgba(138, 26, 64, 0.2);
   --accent-color: #8a1a40;
   --font-family-heading: "Work Sans", sans-serif;
@@ -50,6 +51,10 @@ h3 {
 .work-sans-normal {
   font-family: "Work Sans", sans-serif;
   font-weight: 500;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Buttons */
@@ -256,12 +261,77 @@ h1 {
   left: 10%;
 }
 
-main {
-  min-height: 80vh;
+/* Footer */
+
+footer {
+  background-color: var(--secondary-color-dark);
   width: 100%;
 }
 
+footer .logo-container {
+  position: relative;
+  top: 0%;
+  z-index: 1;
+}
+
+footer .logo-container img {
+  width: 60%; /* img resizes with device width and height adjust to maintain aspect ratio */
+  height: auto;
+}
+
+footer nav {
+  position: sticky; /* footer nav section sticks to bottom until the end of the element*/
+  background-color: var(--secondary-color-dark);
+
+  bottom: 0;
+  z-index: 10;
+}
+
+footer nav .social-links-footer {
+  display: flex;
+  justify-content: center;
+  gap: 4%;
+}
+footer hr {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+}
+.social-links-footer i {
+  font-size: 1.2rem; /* font size for icon sizing */
+}
+.secondary-links a,
+.tertiary-links a,
+i {
+  color: var(--accent-color);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  opacity: 0.7; /* initial transform is 0 and initial opacity is 0.7. When hovered the icon scales up with 1.15 and reaches opacity of 1
+  EASE EFFECT:
+- starts slow
+- speeds up in the middle
+- slows down again at the end
+ */
+}
+
+.secondary-links a:hover,
+.tertiary-links a:hover,
+i:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+.hr-separator {
+  padding: 0 5px;
+  width: 1px; /* thickness */
+  height: 15px; /* length */
+  color: black;
+}
+
 /* Media Queries */
+@media screen and (max-width: 520px) {
+}
+
 @media screen and (max-width: 576px) {
   .carousel-steps {
     display: none;
@@ -290,6 +360,37 @@ main {
     font-size: 1.7rem;
     position: relative;
     right: 3px;
+  }
+
+  /* Footer */
+}
+
+@media screen and (max-width: 767px) {
+  /* Footer */
+  .hr-separator {
+    display: none;
+  }
+  .tertiary-links a,
+  .secondary-links a {
+    display: block;
+    width: 70%; /* decreases div container size so it doesn't become bigger than full viewport width when it scales up during hovering */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .secondary-links a:not(:nth-last-of-type(1)),
+  .tertiary-links a:not(:nth-last-of-type(1)) {
+    padding-bottom: 5px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .secondary-links a,
+  .tertiary-links a {
+    display: inline-block;
+  }
+
+  .hr-separator {
+    visibility: hidden;
   }
 }
 
@@ -325,5 +426,12 @@ main {
 @media screen and (min-width: 1400px) {
   #about-us-paragraph {
     padding-right: 24px;
+  }
+
+  /* Footer */
+
+  .hr-separator {
+    visibility: visible;
+    padding: 0 12px;
   }
 }
