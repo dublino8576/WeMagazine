@@ -15,6 +15,7 @@
 :root {
   --primary-color: #ff7c00;
   --secondary-color: #acc8d7;
+  --secondary-color-dark: #85a5b6;
   --background-color: rgba(138, 26, 64, 0.2);
   --accent-color: #8a1a40;
   --font-family-heading: "Work Sans", sans-serif;
@@ -256,9 +257,30 @@ h1 {
   left: 10%;
 }
 
-main {
-  min-height: 80vh;
+/* Footer */
+
+footer {
+  background-color: var(--secondary-color-dark);
   width: 100%;
+}
+
+footer .logo-container {
+  position: relative;
+  top: 0%;
+  z-index: 1;
+}
+
+footer .logo-container img {
+  width: 60%; /* img resizes with device width and height adjust to maintain aspect ratio */
+  height: auto;
+}
+
+footer nav {
+  position: sticky; /* footer nav section sticks to bottom until the end of the element*/
+  background-color: var(--secondary-color-dark);
+
+  bottom: 0;
+  z-index: 10;
 }
 
 /* Media Queries */
