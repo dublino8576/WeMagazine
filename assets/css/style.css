@@ -378,7 +378,8 @@ footer small a {
   .tertiary-links a,
   .secondary-links a {
     display: block;
-    width: 70%; /* decreases div container size so it doesn't become bigger than full viewport width when it scales up during hovering */
+    width: fit-content;
+    height: fit-content; /* decreases div container size so it doesn't become bigger than full viewport width when it scales up during hovering */
     margin-left: auto;
     margin-right: auto;
   }
