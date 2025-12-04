@@ -379,7 +379,7 @@ footer small a {
   .secondary-links a {
     display: block;
     width: fit-content;
-    height: fit-content; /* decreases div container size so it doesn't become bigger than full viewport width when it scales up during hovering */
+    height: fit-content; /* makes div as big as the anchor tag so you only interact with link when hovering over the content since anchor tag inside div makes the whole div clickable*/
     margin-left: auto;
     margin-right: auto;
   }
