@@ -283,6 +283,30 @@ footer nav {
   z-index: 10;
 }
 
+footer nav .social-links-footer {
+  display: flex;
+  justify-content: center;
+  gap: 4%;
+}
+.social-links-footer i {
+  font-size: 1.2rem; /* font size for icon sizing */
+}
+i {
+  color: var(--accent-color);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  opacity: 0.7; /* initial transform is 0 and initial opacity is 0.7. When hovered the icon scales up with 1.15 and reaches opacity of 1
+  EASE EFFECT:
+- starts slow
+- speeds up in the middle
+- slows down again at the end
+ */
+}
+
+i:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
 /* Media Queries */
 @media screen and (max-width: 576px) {
   .carousel-steps {
