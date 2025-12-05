@@ -69,9 +69,22 @@ a {
 
 .btn-custom-filled:hover {
   background-color: white;
-  border: 1px solid #ff7c00;
-  color: #ff7c00;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
 }
+
+.btn-custom-outline {
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.btn-custom-outline:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
 /* Navbar */
 
 #navbar {
@@ -87,7 +100,15 @@ a {
 
 #navbar,
 .dropdown-menu {
-  background-color: #acc8d7;
+  background-color: var(--secondary-color);
+}
+
+.btn-custom-outline i {
+  color: var(--accent-color);
+}
+
+.btn-custom-outline:hover i {
+  color: white;
 }
 
 /* Header */
@@ -361,7 +382,7 @@ footer hr {
 }
 .secondary-links a,
 .tertiary-links a,
-i {
+footer i {
   color: var(--accent-color);
   transition: transform 0.25s ease, opacity 0.25s ease;
   opacity: 0.7; /* initial transform is 0 and initial opacity is 0.7. When hovered the icon scales up with 1.15 and reaches opacity of 1
@@ -374,7 +395,7 @@ i {
 
 .secondary-links a:hover,
 .tertiary-links a:hover,
-i:hover {
+footer i:hover {
   transform: scale(1.15);
   opacity: 1;
 }
