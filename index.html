@@ -70,7 +70,6 @@
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
-                href="#"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -78,21 +77,27 @@
                 Topics
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">History</a></li>
                 <li>
-                  <a class="dropdown-item" href="#">Wellness & Fitness</a>
+                  <a class="dropdown-item" href="history.html">History</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="wellness&fitness.html"
+                    >Wellness & Fitness</a
+                  >
                 </li>
 
                 <li>
-                  <a class="dropdown-item" href="#">Daily Hacks</a>
+                  <a class="dropdown-item" href="daily-hacks.html"
+                    >Daily Hacks</a
+                  >
                 </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">FAQs</a>
+              <a class="nav-link" href="#carousel">FAQs</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Contact</a>
+              <a class="nav-link" href="#footer">Contact</a>
             </li>
           </ul>
           <form class="d-flex" action="submission-form.html">
@@ -142,20 +147,24 @@
             <p class="lead fade-slide-text animate">Where We Speak</p>
           </div>
           <div class="col-6 col-md-4 d-flex justify-content-center offset-md-2">
-            <button
-              type="button"
-              class="btn btn-custom-filled mt-5 btn-slide btn-slide-left animate"
-            >
-              Read now
-            </button>
+            <form action="#topics">
+              <button
+                type="submit"
+                class="btn btn-custom-filled mt-5 btn-slide btn-slide-left animate"
+              >
+                Read now
+              </button>
+            </form>
           </div>
           <div class="col-6 col-md-4 d-flex justify-content-center">
-            <button
-              type="button"
-              class="btn btn-custom-filled mt-5 btn-slide btn-slide-right animate"
-            >
-              Write now
-            </button>
+            <form action="submission-form.html">
+              <button
+                type="submit"
+                class="btn btn-custom-filled mt-5 btn-slide btn-slide-right animate"
+              >
+                Write now
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -177,7 +186,7 @@
           </div>
           <div class="col-md-4"></div>
           <div class="col-md-4"></div>
-          <div class="col-12 col-md-8 col-lg-6">
+          <div id="carousel" class="col-12 col-md-8 col-lg-6">
             <h2
               id="carousel-heading"
               class="work-sans-normal mb-3 text-center text-md-end"
@@ -338,14 +347,16 @@
         <h2 class="work-sans-normal text-center mb-3">Topics</h2>
         <div id="topics-wrapper">
           <div class="overlay-image-topics my-3">
-            <a href=""> <h3 class="work-sans-normal">History</h3></a>
+            <a href="history.html">
+              <h3 class="work-sans-normal">History</h3></a
+            >
             <img
               src="assets/images/history.webp"
               alt="globe with old books on a desk "
             />
           </div>
           <div class="overlay-image-topics my-3">
-            <a href="#">
+            <a href="wellness&fitness.html">
               <h3 class="work-sans-normal">Wellness & Fitness</h3></a
             >
             <img
@@ -354,7 +365,9 @@
             />
           </div>
           <div class="overlay-image-topics mt-3">
-            <a href="#"> <h3 class="work-sans-normal">Daily Hacks</h3></a>
+            <a href="daily-hacks.html">
+              <h3 class="work-sans-normal">Daily Hacks</h3></a
+            >
             <img
               src="assets/images/tip&tricks.webp"
               alt="Woman sat on the bed checking paper bills by a laptop"
@@ -363,7 +376,7 @@
         </div>
       </section>
     </main>
-    <footer class="mt-auto text-center">
+    <footer id="footer" class="mt-auto text-center">
       <!-- Logo section -->
       <div class="logo-container">
         <img

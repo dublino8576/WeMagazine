@@ -53,6 +53,14 @@ h3 {
   font-weight: 500;
 }
 
+section {
+  scroll-margin-top: 60px; /* shows sections titles when an intermal link directs to it */
+}
+
+/* body {
+  padding-top: 100px; /* equal to navbar height 
+} */
+
 a {
   text-decoration: none;
 }
