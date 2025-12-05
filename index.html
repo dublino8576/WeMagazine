@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO Description max 160 characters to avoid truncation by google -->
+    <meta
+      name="description"
+      content="Online magazine for everyday people written by normal people. In this online magazine view the topics section you can view available topics for readers to read."
+    />
     <!-- Favicon icon links -->
     <link
       rel="apple-touch-icon"
@@ -462,7 +467,6 @@
       const button_left = document.querySelector(".btn-slide-left");
       video.addEventListener("loadeddata", () => {
         texts.forEach((el) => el.classList.add("animate"));
-        console.log("animate");
         button_right.classList.add("animate");
         button_left.classList.add("animate");
       });
@@ -480,7 +484,7 @@
           threshold: 0.2, // trigger when 20% of element is visible
         }
       );
-      console.log("i am her");
+
       document.querySelectorAll(".overlay-image-topics").forEach((el) => {
         observer.observe(el);
       });
