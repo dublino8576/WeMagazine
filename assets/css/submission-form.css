@@ -40,3 +40,10 @@ h2 {
 header p {
   text-align: justify;
 }
+
+/* Main for empty pages */
+
+section {
+  position: relative;
+  top: 60px;
+}
