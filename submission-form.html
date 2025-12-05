@@ -27,7 +27,7 @@
       href="assets/favicon_io/favicon-16x16.png"
     />
     <link rel="manifest" href="assets/favicon_io/site.webmanifest" />
-    <title>Document</title>
+    <title>WeMagazine | Submission Form</title>
 
     <!--Bootstrap Link-->
     <link
@@ -38,6 +38,7 @@
     />
     <!-- CSS Link -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/submission-form.css" />
   </head>
   <body class="d-flex flex-column min-vh-100">
     <nav id="navbar" class="navbar navbar-expand-lg">
@@ -89,16 +90,20 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
-                >FAQs</a
-              >
+              <a class="nav-link active" href="index.html">FAQs</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
-                >Contact</a
-              >
+              <a class="nav-link" href="index.html">Contact</a>
             </li>
           </ul>
+          <form class="d-flex" action="#form">
+            <button
+              class="btn btn-custom-outline me-2 mb-2 mb-lg-0"
+              type="submit"
+            >
+              Submit Your Article <i class="fa-solid fa-pen"></i>
+            </button>
+          </form>
           <form class="d-flex" role="search">
             <input
               class="form-control me-2"
@@ -113,6 +118,86 @@
         </div>
       </div>
     </nav>
+    <header id="header-form" class="container my-5 pb-5 pb-md-0">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8">
+          <h1 class="text-center ">WeMagazine</h1>
+          <h2 class="work-sans-italic-subheading my-3">share your voice</h2>
+          <p class="mb-3">
+            We welcome stories, opinions, and perspectives from everyday people.
+            Use the form below to submit your article and help shape a magazine
+            built by the community, for the community!
+            <br />
+            Make sure your content follows our guidelines so we can showcase
+            your work to readers around the world.
+          </p>
+        </div>
+      </div>
+    </header>
+    <main >
+      <section id="submission-form-section" class="container">
+      <div class="row justify-content-center">
+      <div class="col-12 g-3 col-md-8">
+        <h2 class="work-sans-italic-subheading mt-3">article submission form</h2>
+      
+      <form class="row  g-3 pb-5">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" />
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Password</label>
+          <input type="password" class="form-control" id="inputPassword4" />
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Address</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputAddress"
+            placeholder="1234 Main St"
+          />
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">Address 2</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputAddress2"
+            placeholder="Apartment, studio, or floor"
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">City</label>
+          <input type="text" class="form-control" id="inputCity" />
+        </div>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">State</label>
+          <select id="inputState" class="form-select">
+            <option selected>Choose...</option>
+            <option>...</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label for="inputZip" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="inputZip" />
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck" />
+            <label class="form-check-label" for="gridCheck">
+              Check me out
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Sign in</button>
+        </div>
+        </div>
+      </form>
+      </div>
+      </section>
+    </main>
     <footer class="mt-auto text-center">
       <!-- Logo section -->
       <div class="logo-container">
