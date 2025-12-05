@@ -384,8 +384,9 @@ footer hr {
 .tertiary-links a,
 footer i {
   color: var(--accent-color);
-  transition: transform 0.25s ease, opacity 0.25s ease;
-  opacity: 0.7; /* initial transform is 0 and initial opacity is 0.7. When hovered the icon scales up with 1.15 and reaches opacity of 1
+  font-weight: bold; /* color contrast compliant in bold and no opacity at rest state to make it more accessible */
+  transition: transform 0.25s ease;
+  /* initial transform is 0 When hovered the icon scales up with 1.15 
   EASE EFFECT:
 - starts slow
 - speeds up in the middle
@@ -397,7 +398,6 @@ footer i {
 .tertiary-links a:hover,
 footer i:hover {
   transform: scale(1.15);
-  opacity: 1;
 }
 
 .hr-separator {
