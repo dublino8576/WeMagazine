@@ -63,7 +63,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
+              <a class="nav-link" href="index.html"
                 >Home</a
               >
             </li>
@@ -71,7 +71,6 @@
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
-                href="#"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -79,24 +78,30 @@
                 Topics
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">History</a></li>
                 <li>
-                  <a class="dropdown-item" href="#">Wellness & Fitness</a>
+                  <a class="dropdown-item" href="history.html">History</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="wellness&fitness.html"
+                    >Wellness & Fitness</a
+                  >
                 </li>
 
                 <li>
-                  <a class="dropdown-item" href="#">Daily Hacks</a>
+                  <a class="dropdown-item" href="daily-hacks.html"
+                    >Daily Hacks</a
+                  >
                 </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">FAQs</a>
+              <a class="nav-link" href="index.html#carousel">FAQs</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Contact</a>
+              <a class="nav-link" href="index.html#footer">Contact</a>
             </li>
           </ul>
-          <form class="d-flex" action="#form">
+          <form class="d-flex" action="submission-form.html">
             <button
               class="btn btn-custom-outline me-2 mb-2 mb-lg-0"
               type="submit"
@@ -135,65 +140,68 @@
       </div>
     </header>
     <main >
-      <section id="submission-form-section" class="container my-5">
+      <section id="submission-form-section" class="container mt-5 mb-3">
       <div class="row justify-content-center">
       <div class="col-12  col-md-8">
         <h2 class="work-sans-italic-subheading  mb-3 ps-3 ps-md-0">article submission form</h2>
       
-      <form class="row px-3 px-md-0 g-3 pb-5">
+      <form class="row px-3 px-md-0 g-3 pb-5" action="success-page.html" >
         <div class="col-md-6">
-          <label for="inputEmail4" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail4" />
-        </div>
-        <div class="col-md-6">
-          <label for="inputPassword4" class="form-label">Password</label>
-          <input type="password" class="form-control" id="inputPassword4" />
-        </div>
-        <div class="col-12">
-          <label for="inputAddress" class="form-label">Address</label>
-          <input
-            type="text"
-            class="form-control"
-            id="inputAddress"
-            placeholder="1234 Main St"
-          />
-        </div>
-        <div class="col-12">
-          <label for="inputAddress2" class="form-label">Address 2</label>
-          <input
-            type="text"
-            class="form-control"
-            id="inputAddress2"
-            placeholder="Apartment, studio, or floor"
-          />
+          <label for="inputName" class="form-label">Author's First Name*</label>
+          <input type="text" class="form-control" id="inputName" name="author_name" required />
         </div>
         <div class="col-md-6">
-          <label for="inputCity" class="form-label">City</label>
-          <input type="text" class="form-control" id="inputCity" />
+          <label for="inputLastName" class="form-label">Author's Last Name*</label>
+          <input type="text" class="form-control" id="inputLastName" name="author_last_name" required />
         </div>
+        <div class="col-12 col-md-8">
+          <label for="formFileAuthor" class="form-label">Author's Photo*</label>
+          <input class="form-control" type="file" id="formFileAuthor" name="uploadedFile" required>
+        </div>
+        <div class="col-12 col-md-8">
+          <label for="inputArticleTitle" class="form-label">Article's Title*</label>
+          <input type="text" class="form-control" id="inputArticleTitle" name="inputArticleTitle" required/>
+        </div>
+        
         <div class="col-md-4">
-          <label for="inputState" class="form-label">State</label>
-          <select id="inputState" class="form-select">
-            <option selected>Choose...</option>
-            <option>...</option>
+          <label for="topic_select" class="form-label">Article Topic*</label>
+          <select id="topic_select" name="topic" class="form-select" required>
+            <option value="" selected>Choose...</option>
+            <option value="history" >History</option>
+            <option value="wellness_fitness">Wellness&Fitness</option>
+            <option value="daily_hacks" >Daily Hacks</option>
           </select>
         </div>
-        <div class="col-md-2">
-          <label for="inputZip" class="form-label">Zip</label>
-          <input type="text" class="form-control" id="inputZip" />
+        <div class="col-12 col-md-8">
+          <label for="formFileArticle" class="form-label">Article's Photo*</label>
+          <input class="form-control" type="file" id="formFileArticle" name="uploadedFileArticle" required>
+        </div>
+        
+        <div class="col-12">
+          <label for="articleBody" class="form-label">Input Your Article Here!*</label>
+          <textarea class="form-control" id="articleBody" name="articleBody" minlength="3000" rows="5" required></textarea>
+          <span aria-label="required characters for article">Minimum 3000 characters</span>
         </div>
         <div class="col-12">
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck" />
+            <input class="form-check-input" type="checkbox" id="gridCheck" name="gridCheck" required/>
             <label class="form-check-label" for="gridCheck">
-              Check me out
+              I confirm this is my original content.
             </label>
           </div>
         </div>
         <div class="col-12">
-          <button type="submit" class="btn btn-primary">Sign in</button>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck2" name="gridCheck2" required />
+            <label class="form-check-label" for="gridCheck2">
+             I agree to the platform’s guidelines and terms.
+            </label>
+          </div>
         </div>
+        <div class="col-12 text-center pt-3">
+          <button type="submit" class="btn btn-custom-filled">Become an Author!</button>
         </div>
+        
       </form>
       </div>
       </section>
