@@ -39,6 +39,7 @@
     <!-- CSS Link -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/submission-form.css" />
+    <link rel="stylesheet" href="assets/css/article_card.css" />
   </head>
   <body class="d-flex flex-column min-vh-100">
     <nav id="navbar" class="navbar navbar-expand-lg">
@@ -125,15 +126,65 @@
       </div>
     </nav>
     <main>
-      <section class="container my-5" style="min-height: 60vh">
-        <div class="row justify-content-center">
-          <div class="col-md-8 text-center border rounded-3 p-5 shadow-sm">
-            <h2 class="fw-semibold mb-3">This Page Is Under Construction</h2>
-            <p class="text-muted mb-4">
-              We're currently building this experience. It will be available in
-              the next update.
-            </p>
-            <button class="btn btn-custom-outline" disabled>Coming Soon</button>
+      <section id="hacks-articles-section" class="container min-vh-100 mt-5">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="text-center work-sans-normal mb-5">Daily Hacks</h1>
+          </div>
+          <div class="col-12">
+            <h2 class="work-sans-italic-subheading mb-3">Article List</h2>
+          </div>
+          <div class="col-12">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <!-- h-100 overrides standard bootstrap card height to adapt to flip-card height -->
+                  <div class="card h-100">
+                    <img
+                      src="assets/images/50_30_20-rule.webp"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h3
+                        class="card-title card-title-front work-sans-normal h5"
+                      >
+                        the 50/30/20 Rule
+                      </h3>
+                      <p class="card-text">
+                        If you’ve ever wondered how to manage your money without
+                        feeling overwhelmed, this quick guide might be exactly
+                        what you need.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flip-card-back">
+                  <div class="card h-100">
+                    <img
+                      src="assets/images/daily_hacks_first_author.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h3
+                        class="card-title card-title-back work-sans-italic-subheading h5"
+                      >
+                        Elise Branner
+                      </h3>
+                      <p class="card-text">
+                        <em>Articles published: </em>3
+                        <br />
+                        <em>Favorite topic: </em>Daily Hacks
+                      </p>
+                      <a href="#" class="btn btn-custom-filled d-block mx-auto"
+                        >Read Article</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

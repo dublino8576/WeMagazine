@@ -1,0 +1,99 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,500;0,700;1,300&family=DM+Sans:wght@300&display=swap");
+
+/* CSS Variables */
+:root {
+  --primary-color: #ff7c00;
+  --secondary-color: #acc8d7;
+  --secondary-color-dark: #85a5b6;
+  --background-color: rgba(138, 26, 64, 0.2);
+  --accent-color: #8a1a40;
+  --font-family-heading: "Work Sans", sans-serif;
+  --font-family-body: "DM Sans", sans-serif;
+  --text-color-dark: #36454f;
+  --text-color-light: #ffffff;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 382px;
+  perspective: 1000px;
+  border-radius: 0.375rem;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 0.375rem;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  /* background-color: #bbb; */
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  border-radius: 0.375rem;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+#hacks-articles-section h1 {
+  text-shadow: none;
+}
+
+#hacks-articles-section h2 {
+  text-decoration: underline;
+}
+
+.card-body {
+  overflow: hidden; /* removes overflowing paragraph from sight */
+}
+
+.card-title-front {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.card-title-back {
+  text-transform: capitalize;
+}
+
+#hacks-articles-section .card-title a {
+  text-align: center;
+}
+
+.card-body p {
+  text-align: justify;
+}
+
+@media screen and (max-width: 576px) {
+  .flip-card {
+    max-width: 250px;
+    max-height: 360px;
+  }
+
+  #hacks-articles-section .row .col-12 {
+    display: flex;
+    justify-content: center;
+  }
+}
