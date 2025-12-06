@@ -172,7 +172,9 @@
     <main>
       <section id="about-us" class="container my-5">
         <div class="row">
-          <div class="col-12 col-md-8 col-lg-6 text-center text-md-start mb-3">
+          <div
+            class="col-12 col-md-8 col-lg-6 text-center text-md-start mb-3 topics-fade-animation"
+          >
             <h2 class="work-sans-normal mb-3">About us</h2>
             <p id="about-us-paragraph" class="body-text">
               <span>W</span>e<span>M</span>agazine is a space where every voice
@@ -186,7 +188,10 @@
           </div>
           <div class="col-md-4"></div>
           <div class="col-md-4"></div>
-          <div id="carousel" class="col-12 col-md-8 col-lg-6">
+          <div
+            id="carousel"
+            class="col-12 col-md-8 col-lg-6 topics-fade-animation"
+          >
             <h2
               id="carousel-heading"
               class="work-sans-normal mb-3 text-center text-md-end"
@@ -344,9 +349,11 @@
         </div>
       </section>
       <section id="topics" class="container my-5">
-        <h2 class="work-sans-normal text-center mb-3">Topics</h2>
+        <h2 class="work-sans-normal text-center mb-3 topics-fade-animation">
+          Topics
+        </h2>
         <div id="topics-wrapper">
-          <div class="overlay-image-topics my-3">
+          <div class="overlay-image-topics topics-fade-animation my-3">
             <a href="history.html">
               <h3 class="work-sans-normal">History</h3></a
             >
@@ -355,7 +362,7 @@
               alt="globe with old books on a desk "
             />
           </div>
-          <div class="overlay-image-topics my-3">
+          <div class="overlay-image-topics topics-fade-animation my-3">
             <a href="wellness&fitness.html">
               <h3 class="work-sans-normal">Wellness & Fitness</h3></a
             >
@@ -364,7 +371,7 @@
               alt="Man doing headstand"
             />
           </div>
-          <div class="overlay-image-topics mt-3">
+          <div class="overlay-image-topics topics-fade-animation mt-3">
             <a href="daily-hacks.html">
               <h3 class="work-sans-normal">Daily Hacks</h3></a
             >
@@ -502,7 +509,7 @@
         }
       );
 
-      document.querySelectorAll(".overlay-image-topics").forEach((el) => {
+      document.querySelectorAll(".topics-fade-animation").forEach((el) => {
         observer.observe(el);
       });
     </script>
