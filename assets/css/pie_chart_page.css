@@ -1,0 +1,94 @@
+:root {
+  --pie-needs: #e74f4f;
+  --pie-wants: #fc921f;
+  --pie-savings: #149ece;
+  --primary-color: #ff7c00;
+  --secondary-color: #acc8d7;
+  --secondary-color-dark: #85a5b6;
+  --background-color: rgb(252, 243, 243);
+  --accent-color: #8a1a40;
+  --font-family-heading: "Work Sans", sans-serif;
+  --font-family-body: "DM Sans", sans-serif;
+  --text-color-dark: #36454f;
+  --text-color-light: #ffffff;
+}
+
+/* Article page */
+
+/* Article */
+
+article {
+  padding-top: 60px;
+}
+
+.charts {
+  display: flex;
+  width: 90%;
+
+  place-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.donut {
+  flex: 1 0;
+  width: 100%;
+  aspect-ratio: 1; /* turns it into a square */
+
+  background-image: radial-gradient(
+      /* bands of color radiating from center like rays, when divided in sections and given transparent you can make your donut showing colors underneath and the rest the colour of the background */
+        var(--background-color) 0 40%,
+      transparent 40% 70%,
+      var(--background-color) 70%
+    ),
+    /* conic gradient makes slices of colors start from the center of the circle, start slice can start 60deg delayed rather than perpendicular to the centre */
+      conic-gradient(
+        from 60deg,
+        var(--pie-needs) 50%,
+        var(--pie-wants) 0 80%,
+        var(--pie-savings) 0
+      );
+}
+
+.legends {
+  font-size: 0.9rem;
+  flex-basis: 100%; /* flexes till whole length */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: wrap;
+  gap: 1rem;
+}
+
+.legends span {
+  position: relative;
+  padding-inline-start: 1.25rem;
+}
+
+.legends span::before {
+  position: absolute;
+  top: 0.2rem;
+  left: 0.2rem;
+  content: "";
+  width: 0.8rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.legends span:nth-child(1)::before {
+  background-color: var(--pie-needs);
+}
+
+.legends span:nth-child(2)::before {
+  background-color: var(--pie-wants);
+}
+
+.legends span:nth-child(3)::before {
+  background-color: var(--pie-savings);
+}
+
+@media screen and (min-width: 768px) {
+  .charts {
+    width: 70%;
+  }
+}
