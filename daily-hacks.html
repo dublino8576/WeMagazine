@@ -304,6 +304,13 @@
       document.querySelectorAll(".overlay-image-topics").forEach((el) => {
         observer.observe(el);
       });
+
+      //Card can flip on click for mobile device that don't have hover
+      document.querySelectorAll(".flip-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          card.classList.toggle("flip");
+        });
+      });
     </script>
   </body>
 </html>
