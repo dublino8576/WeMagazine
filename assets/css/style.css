@@ -342,13 +342,13 @@ h1 {
 }
 
 /* hover state for topic image title once visible */
-.topics-fade-animation.visible h3 {
+#topics .topics-fade-animation.visible h3 {
   color: var(--text-color-light);
   font-weight: 900;
   transition: transform 1s ease;
 }
 
-.topics-fade-animation.visible h3:hover {
+#topics .topics-fade-animation.visible h3:hover {
   transform: scale(1.05);
 }
 
