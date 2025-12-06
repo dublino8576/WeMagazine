@@ -32,7 +32,9 @@
   border-radius: 0.375rem;
 }
 
-.flip-card:hover .flip-card-inner {
+.flip-card:hover .flip-card-inner,
+.flip-card.flip .flip-card-inner {
+  /*flip for mobile and desktop */
   transform: rotateY(180deg);
 }
 
