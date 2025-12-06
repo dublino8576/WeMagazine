@@ -126,9 +126,9 @@
     <header id="header-form" class="container my-5 pb-md-0">
       <div class="row justify-content-center">
         <div class="col-12 col-md-8">
-          <h1 class="text-center ">WeMagazine</h1>
-          <h2 class="work-sans-italic-subheading mt-5 mb-3">share your voice</h2>
-          <p >
+          <h1 class="text-center topics-fade-animation ">WeMagazine</h1>
+          <h2 class="work-sans-italic-subheading mt-5 mb-3 topics-fade-animation">share your voice</h2>
+          <p class="topics-fade-animation">
             We welcome stories, opinions, and perspectives from everyday people.
             Use the form below to submit your article and help shape a magazine
             built by the community, for the community!
@@ -143,9 +143,9 @@
       <section id="submission-form-section" class="container mt-5 mb-3">
       <div class="row justify-content-center">
       <div class="col-12  col-md-8">
-        <h2 class="work-sans-italic-subheading  mb-3 ps-3 ps-md-0">article submission form</h2>
+        <h2 class="work-sans-italic-subheading  mb-3 ps-3 ps-md-0 topics-fade-animation">article submission form</h2>
       
-      <form class="row px-3 px-md-0 g-3 pb-5" action="success-page.html" >
+      <form class="row px-3 px-md-0 g-3 pb-5 topics-fade-animation" action="success-page.html" >
         <div class="col-md-6">
           <label for="inputName" class="form-label">Author's First Name*</label>
           <input type="text" class="form-control" id="inputName" name="author_name" required />
@@ -318,7 +318,7 @@
           threshold: 0.2, // trigger when 20% of element is visible
         }
       );
-      document.querySelectorAll(".overlay-image-topics").forEach((el) => {
+      document.querySelectorAll(".topics-fade-animation").forEach((el) => {
         observer.observe(el);
       });
     </script>

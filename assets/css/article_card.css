@@ -6,7 +6,7 @@
   --primary-color: #ff7c00;
   --secondary-color: #acc8d7;
   --secondary-color-dark: #85a5b6;
-  --background-color: rgba(138, 26, 64, 0.2);
+  --background-color: rgb(252, 243, 243);
   --accent-color: #8a1a40;
   --font-family-heading: "Work Sans", sans-serif;
   --font-family-body: "DM Sans", sans-serif;
@@ -14,6 +14,7 @@
   --text-color-light: #ffffff;
 }
 
+/* flip card parent is static, sets the size of the card and is transparent, this is what user hovers on  */
 .flip-card {
   background-color: transparent;
   width: 300px;
@@ -22,12 +23,15 @@
   border-radius: 0.375rem;
 }
 
+/* children are not static */
+
+/* here is where the animation takes place */
 .flip-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
   transition: transform 0.6s;
-  transform-style: preserve-3d;
+  transform-style: preserve-3d; /* adds 3D look to the flip */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 0.375rem;
 }
@@ -36,10 +40,12 @@
 .flip-card.flip .flip-card-inner {
   /*flip for mobile and desktop */
   transform: rotateY(180deg);
+  /* switches position of the front and back card */
 }
 
 .flip-card-front,
 .flip-card-back {
+  /*  */
   position: absolute;
   width: 100%;
   height: 100%;
@@ -47,16 +53,11 @@
   backface-visibility: hidden;
 }
 
-.flip-card-front {
-  /* background-color: #bbb; */
-  color: black;
-}
-
 .flip-card-back {
-  background-color: #2980b9;
   border-radius: 0.375rem;
-  color: white;
+  /* matches card component default border radius */
   transform: rotateY(180deg);
+  /*rotates opposite side so that backface hides it when not hovered */
 }
 
 #hacks-articles-section h1 {

@@ -16,7 +16,7 @@
   --primary-color: #ff7c00;
   --secondary-color: #acc8d7;
   --secondary-color-dark: #85a5b6;
-  --background-color: rgba(138, 26, 64, 0.2);
+  --background-color: rgb(252, 243, 243);
   --accent-color: #8a1a40;
   --font-family-heading: "Work Sans", sans-serif;
   --font-family-body: "DM Sans", sans-serif;
@@ -308,13 +308,17 @@ h1 {
   position: relative;
   display: flex;
   justify-content: center; /* move h3 to center */
+}
+
+.topics-fade-animation {
   opacity: 0;
   transform: scale(0.6);
   transition: opacity 2s ease-out, transform 2s ease-out;
   /* opacity and transform will be triggered from below and put their value on this transition */
 }
+
 /* visible state is used for animations that activate when element becomes visible in the user viewport (in this case 20% of element must be visible) */
-.overlay-image-topics.visible {
+.topics-fade-animation.visible {
   opacity: 1;
   transform: scale(1);
 }
@@ -338,13 +342,13 @@ h1 {
 }
 
 /* hover state for topic image title once visible */
-.overlay-image-topics.visible h3 {
+.topics-fade-animation.visible h3 {
   color: var(--text-color-light);
   font-weight: 900;
   transition: transform 1s ease;
 }
 
-.overlay-image-topics.visible h3:hover {
+.topics-fade-animation.visible h3:hover {
   transform: scale(1.05);
 }
 

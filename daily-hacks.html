@@ -135,7 +135,7 @@
             <h2 class="work-sans-italic-subheading mb-3">Article List</h2>
           </div>
           <div class="col-12">
-            <div class="flip-card">
+            <div class="flip-card topics-fade-animation">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
                   <!-- h-100 overrides standard bootstrap card height to adapt to flip-card height -->
@@ -143,7 +143,7 @@
                     <img
                       src="assets/images/50_30_20-rule.webp"
                       class="card-img-top"
-                      alt="..."
+                      alt="A person counting banknotes using their phone to count them"
                     />
                     <div class="card-body">
                       <h3
@@ -164,7 +164,7 @@
                     <img
                       src="assets/images/daily_hacks_first_author.jpg"
                       class="card-img-top"
-                      alt="..."
+                      alt="An author sat on a desk with her notebook open"
                     />
                     <div class="card-body">
                       <h3
@@ -301,7 +301,7 @@
           threshold: 0.2, // trigger when 20% of element is visible
         }
       );
-      document.querySelectorAll(".overlay-image-topics").forEach((el) => {
+      document.querySelectorAll(".topics-fade-animation").forEach((el) => {
         observer.observe(el);
       });
 
