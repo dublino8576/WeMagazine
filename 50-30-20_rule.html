@@ -27,7 +27,7 @@
       href="assets/favicon_io/favicon-16x16.png"
     />
     <link rel="manifest" href="assets/favicon_io/site.webmanifest" />
-    <title>WeMagazine | Daily Hacks</title>
+    <title>WeMagazine | The 50/30/20 Rule</title>
 
     <!--Bootstrap Link-->
     <link
@@ -40,6 +40,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/submission-form.css" />
     <link rel="stylesheet" href="assets/css/article_card.css" />
+    <link rel="stylesheet" href="assets/css/pie_chart_page.css" />
   </head>
   <body class="d-flex flex-column min-vh-100">
     <nav id="navbar" class="navbar navbar-expand-lg">
@@ -126,74 +127,80 @@
       </div>
     </nav>
     <main>
-      <section id="hacks-articles-section" class="container min-vh-100 mt-5">
+      <article id="hacks-articles-section" class="container min-vh-100 my-5">
         <div class="row">
           <div class="col-12">
             <h1 class="text-center work-sans-normal mb-5 topics-fade-animation">
-              Daily Hacks
+              the 50/30/20 Rule
             </h1>
           </div>
           <div class="col-12">
             <h2 class="work-sans-italic-subheading mb-3 topics-fade-animation">
-              Article List
+              How to sort out your finances
             </h2>
           </div>
-          <div class="col-12">
-            <div class="flip-card topics-fade-animation">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <!-- h-100 overrides standard bootstrap card height to adapt to flip-card height -->
-                  <div class="card h-100">
-                    <img
-                      src="assets/images/50_30_20-rule.webp"
-                      class="card-img-top"
-                      alt="A person counting banknotes using their phone to count them"
-                    />
-                    <div class="card-body">
-                      <h3
-                        class="card-title card-title-front work-sans-normal h5"
-                      >
-                        the 50/30/20 Rule
-                      </h3>
-                      <p class="card-text">
-                        If you’ve ever wondered how to manage your money without
-                        feeling overwhelmed, this quick guide might be exactly
-                        what you need.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="flip-card-back">
-                  <div class="card h-100">
-                    <img
-                      src="assets/images/daily_hacks_first_author.jpg"
-                      class="card-img-top"
-                      alt="An author sat on a desk with her notebook open"
-                    />
-                    <div class="card-body">
-                      <h3
-                        class="card-title card-title-back work-sans-italic-subheading h5"
-                      >
-                        Elise Branner
-                      </h3>
-                      <p class="card-text">
-                        <em>Articles published: </em>3
-                        <br />
-                        <em>Favorite topic: </em>Daily Hacks
-                      </p>
-                      <a
-                        href="50-30-20_rule.html"
-                        class="btn btn-custom-filled d-block mx-auto"
-                        >Read Article</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="col-12 col-md-6">
+            <p id="article" class="topics-fade-animation mb-3">
+              If you’ve ever tried to “finally sort out your finances” only to
+              end up staring at confusing numbers or closing the tab in
+              frustration, you’re not alone. I used to treat budgeting like
+              flat-pack furniture: I avoided it until something came crashing
+              down — in my case, my grocery card being declined over a £12
+              purchase, which was mortifying but exactly the wake-up call I
+              needed.
+              <br />
+
+              That’s when I discovered the 50/30/20 rule, a budgeting method
+              simple enough that even my tired, overworked brain could manage.
+              It wasn’t just simple; it was sustainable. It didn’t demand I stop
+              enjoying life, just that I see where my money was going and make
+              better choices without feeling deprived.
+              <br />
+              The rule divides your monthly income into three categories: 50%
+              for needs like rent, groceries, transport, and bills; 30% for
+              wants, the small joys like brunch, a new phone case, or weekend
+              outings; and 20% for savings or debt repayment, including
+              emergency funds and future goals. Before this, I felt guilty for
+              every coffee or takeaway, but knowing 30% was set aside for
+              enjoyment removed that stress. My friend Dani tried it too, and
+              after her first month, she said, “I knew exactly where my money
+              went — and I didn’t hate myself for it,” which is exactly the
+              relief and clarity this method inspires. The rule is flexible —
+              life isn’t always perfectly divisible. Rent might be high, bills
+              unexpected, or priorities shifting, but the key is intention:
+              prioritise needs, enjoy wants mindfully, and save something every
+              month, even if it’s just £10. Tiny progress is still progress.
+              <br />
+              Most budgeting advice assumes endless discipline or a high income,
+              but this method was made for real people with real lives, not
+              financial experts. I’m not suddenly rich, but I do have a small
+              emergency fund, I know where my money goes, and I feel calmer when
+              payday comes. The 50/30/20 rule doesn’t require perfection, just
+              consistency, and that’s enough to give you control without
+              overwhelming your life. If you’ve been wanting a practical way to
+              take control of your finances, give it a try — it might be the
+              simplest lifestyle change that makes the biggest difference.
+            </p>
+          </div>
+          <div class="col-12 col-md-6">
+            <h2
+              id="pie-chart-title"
+              class="work-sans-italic-subheading mb-3 topics-fade-animation text-center"
+            >
+              Visual Explanation of the 50/30/20 rule
+            </h2>
+            <figure class="charts text-center">
+              <!--Identifies the graphics of a component with captions serving as aria labels for screen reader-->
+              <div class="pie"></div>
+              <div class="pie-donut"></div>
+              <figcaption class="legends">
+                <span>50 Needs</span><span>30 Wants</span><span></span
+                ><span>20 Savings</span>
+              </figcaption>
+            </figure>
           </div>
         </div>
-      </section>
+      </article>
     </main>
     <footer class="mt-auto text-center">
       <!-- Logo section -->
@@ -309,13 +316,6 @@
       );
       document.querySelectorAll(".topics-fade-animation").forEach((el) => {
         observer.observe(el);
-      });
-
-      //Card can flip on click for mobile device that don't have hover
-      document.querySelectorAll(".flip-card").forEach((card) => {
-        card.addEventListener("click", () => {
-          card.classList.toggle("flip");
-        });
       });
     </script>
   </body>
