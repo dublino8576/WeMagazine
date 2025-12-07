@@ -133,9 +133,14 @@
         id="hero-video"
         type="video/mp4"
         fetchpriority="high"
+        aria-hidden="true"
       >
         <source src="assets/video/girls_writing.mp4" type="video/mp4" />
       </video>
+      <!-- Text alternative for screen readers -->
+      <span id="hero-video-desc" class="visually-hidden">
+        Background video of two girls writing in notebooks.
+      </span>
 
       <div class="container">
         <div class="row">
@@ -404,21 +409,25 @@
               href="http://www.instagram.com"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Opens a new tab navigating to our Instagram profile page"
               ><i class="fa-brands fa-instagram"></i></a
             ><a
               href="http://www.facebook.com"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Opens a new tab navigating to our Facebook profile page"
               ><i class="fa-brands fa-facebook"></i></a
             ><a
               href="http://www.x.com"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Opens a new tab navigating to our X profile page"
               ><i class="fa-brands fa-twitter"></i></a
             ><a
               href="http://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Opens a new tab navigating to our Linkedin profile page"
               ><i class="fa-brands fa-linkedin-in"></i
             ></a>
           </div>

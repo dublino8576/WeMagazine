@@ -18,6 +18,7 @@
   --secondary-color-dark: #85a5b6;
   --background-color: rgb(252, 243, 243);
   --accent-color: #8a1a40;
+  --footer-links-color: #5d132c;
   --font-family-heading: "Work Sans", sans-serif;
   --font-family-body: "DM Sans", sans-serif;
   --text-color-dark: #36454f;
@@ -395,7 +396,7 @@ footer hr {
 .secondary-links a,
 .tertiary-links a,
 footer i {
-  color: var(--accent-color);
+  color: var(--footer-links-color);
   font-weight: bold; /* color contrast compliant in bold and no opacity at rest state to make it more accessible */
   transition: transform 0.25s ease;
   /* initial transform is 0 When hovered the icon scales up with 1.15 
@@ -425,6 +426,14 @@ footer small a {
 }
 
 /* Media Queries */
+
+@media (prefers-reduced-motion: reduce) {
+  #hero-video {
+    animation: none;
+    transition: none;
+    display: none; /* Removes video for people who cannot tolerate moving backgrounds (vestibular issues) */
+  }
+}
 
 @media screen and (max-width: 576px) {
   .carousel-steps {
