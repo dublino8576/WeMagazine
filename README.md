@@ -18,15 +18,20 @@
 
 Welcome! Click [here](https://dublino8576.github.io/WeMagazine/) to view WeMagazine's website, the online magazine by the people for the people!
 
+Please go to the documentation folder to view extensive testing:
+- Lighthouse performance
+- HTML validator
+- CSS validator
+- AI generated wireframes 
 
 
-### Kanban Board Project Link
+## Kanban Board Project Link
 Click [here](https://github.com/users/dublino8576/projects/4) to view my project for WeMagazine.
 It includes User Stories, must-haves for the MVP, and testing tasks for final deployment.
 
 
 
-### Website Purpose
+## Website Purpose
 
 WeMagazine is an online magazine platform geared towards everyday people who feel inspired enough to share any bit of knowledge that is easy to understand for everyone in inclusive, friendly and relaxed way.
 Two types of users can use this websites. We provide a stepping stone into the publishing world for writers of any experience that want to give back to the world and create a community.
@@ -38,7 +43,7 @@ WeMagazine is a place "Where We Speak", everyone finds their voice.
 
 
 
-### Features 
+## Features 
 
 #### Navigation Bar
 
@@ -87,5 +92,14 @@ To the left, a custom logo of WeMagazine is featured
 
 - Features a fully integrated form in the layout of the page with all the required fields. The form is from Bootstrap and has been customised accordingly.
 - When the user completes the form successfully, they are directed on a success page with a clear message and easy navigation links.
+
+## Deployment Procedure
+
+Early deployment was achieved using GitHub pages, which allowed me to view any bugs or rendering issues across web browsers and mobile devices early on.
+I have used GitHub Projects to create a Kanban board template organising User Stories with related Acceptance Criteria and Developer Tasks.
+Each small feature implemented had its dedicated branch, I have worked on one ticket and one feature at a time, allowing me to be time-efficient and precise.
+
+## Screenshots
+
 
 
