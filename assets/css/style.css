@@ -73,6 +73,8 @@ a {
 
   padding: 10px 20px;
   border-radius: 5px;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  -o-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -126,7 +128,11 @@ a {
   position: relative;
   height: 100vh;
   width: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   overflow: hidden;
 }
@@ -135,7 +141,9 @@ a {
   position: relative;
   height: 100vh;
   width: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: 32% 70%;
   object-position: 32% 70%;
   opacity: 0.9;
   z-index: -1;
@@ -155,6 +163,8 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
@@ -175,54 +185,103 @@ h1 {
 
 .fade-slide-text {
   opacity: 0; /* start invisible */
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
   transform: translateY(-100%); /* start off-screen to the top */
 }
 .fade-slide-text.animate {
+  -webkit-animation: slideFadeIn 1.5s forwards;
   animation: slideFadeIn 1.5s forwards;
+  -webkit-animation-delay: 2s;
   animation-delay: 2s; /* delay before animation starts */
+}
+
+@-webkit-keyframes slideFadeIn {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideFadeIn {
   to {
     opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
 /* Base state so buttons do not load first in final position, they are invisible until animate class is triggered*/
 .btn-slide {
   opacity: 0;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
   transform: translateY(100%); /* off-screen at bottom */
 }
 
 /* Slide from bottom-left */
 .btn-slide-left.animate {
+  -webkit-animation: slideFromBottomLeft 1.5s ease-out forwards;
   animation: slideFromBottomLeft 1.5s ease-out forwards;
+  -webkit-animation-delay: 3.5s;
   animation-delay: 3.5s;
+}
+
+@-webkit-keyframes slideFromBottomLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-100%, 100%);
+    transform: translate(-100%, 100%); /* bottom-left corner */
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); /* final position */
+  }
 }
 
 @keyframes slideFromBottomLeft {
   0% {
     opacity: 0;
+    -webkit-transform: translate(-100%, 100%);
     transform: translate(-100%, 100%); /* bottom-left corner */
   }
   100% {
     opacity: 1;
+    -webkit-transform: translate(0, 0);
     transform: translate(0, 0); /* final position */
   }
 }
 /* Slide from bottom-right */
 .btn-slide-right.animate {
+  -webkit-animation: slideFromBottomRight 1.5s ease-out forwards;
   animation: slideFromBottomRight 1.5s ease-out forwards;
+  -webkit-animation-delay: 3.5s;
   animation-delay: 3.5s;
+}
+
+@-webkit-keyframes slideFromBottomRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(100%, 100%);
+    transform: translate(100%, 100%); /* bottom-right corner */
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); /* final position */
+  }
 }
 
 @keyframes slideFromBottomRight {
   0% {
     opacity: 0;
+    -webkit-transform: translate(100%, 100%);
     transform: translate(100%, 100%); /* bottom-right corner */
   }
   100% {
     opacity: 1;
+    -webkit-transform: translate(0, 0);
     transform: translate(0, 0); /* final position */
   }
 }
@@ -269,6 +328,18 @@ h1 {
 }
 
 .carousel-steps {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    color-stop(20%, var(--primary-color)),
+    color-stop(80%, var(--accent-color))
+  );
+  background: -o-linear-gradient(
+    top left,
+    var(--primary-color) 20%,
+    var(--accent-color) 80%
+  );
   background: linear-gradient(
     to bottom right,
     var(--primary-color) 20%,
@@ -280,8 +351,14 @@ h1 {
   border: 2px solid var(--accent-color);
   width: 60px;
   height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   font-weight: 900;
   font-size: 3rem;
@@ -294,7 +371,12 @@ h1 {
 /* Topics section */
 
 #topics-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -302,25 +384,39 @@ h1 {
   width: 100%;
 
   overflow: hidden;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
 .overlay-image-topics {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center; /* move h3 to center */
 }
 
 .topics-fade-animation {
   opacity: 0;
+  -webkit-transform: scale(0.6);
+  -ms-transform: scale(0.6);
   transform: scale(0.6);
+  -webkit-transition: opacity 2s ease-out, -webkit-transform 2s ease-out;
+  transition: opacity 2s ease-out, -webkit-transform 2s ease-out;
+  -o-transition: opacity 2s ease-out, transform 2s ease-out;
   transition: opacity 2s ease-out, transform 2s ease-out;
+  transition: opacity 2s ease-out, transform 2s ease-out,
+    -webkit-transform 2s ease-out;
   /* opacity and transform will be triggered from below and put their value on this transition */
 }
 
 /* visible state is used for animations that activate when element becomes visible in the user viewport (in this case 20% of element must be visible) */
 .topics-fade-animation.visible {
   opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
   transform: scale(1);
 }
 
@@ -346,10 +442,16 @@ h1 {
 #topics .topics-fade-animation.visible h3 {
   color: var(--text-color-light);
   font-weight: 900;
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  -o-transition: transform 1s ease;
   transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
 }
 
 #topics .topics-fade-animation.visible h3:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
 
@@ -380,7 +482,11 @@ footer nav {
 }
 
 footer nav .social-links-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   gap: 4%;
 }
@@ -398,7 +504,11 @@ footer hr {
 footer i {
   color: var(--footer-links-color);
   font-weight: bold; /* color contrast compliant in bold and no opacity at rest state to make it more accessible */
+  -webkit-transition: -webkit-transform 0.25s ease;
+  transition: -webkit-transform 0.25s ease;
+  -o-transition: transform 0.25s ease;
   transition: transform 0.25s ease;
+  transition: transform 0.25s ease, -webkit-transform 0.25s ease;
   /* initial transform is 0 When hovered the icon scales up with 1.15 
   EASE EFFECT:
 - starts slow
@@ -410,6 +520,8 @@ footer i {
 .secondary-links a:hover,
 .tertiary-links a:hover,
 footer i:hover {
+  -webkit-transform: scale(1.15);
+  -ms-transform: scale(1.15);
   transform: scale(1.15);
 }
 
@@ -429,7 +541,10 @@ footer small a {
 
 @media (prefers-reduced-motion: reduce) {
   #hero-video {
+    -webkit-animation: none;
     animation: none;
+    -webkit-transition: none;
+    -o-transition: none;
     transition: none;
     display: none; /* Removes video for people who cannot tolerate moving backgrounds (vestibular issues) */
   }
@@ -474,7 +589,11 @@ footer small a {
   .tertiary-links a,
   .secondary-links a {
     display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content; /* makes div as big as the anchor tag so you only interact with link when hovering over the content since anchor tag inside div makes the whole div clickable*/
     margin-left: auto;
     margin-right: auto;
@@ -488,13 +607,21 @@ footer small a {
 @media screen and (min-width: 768px) {
   /* Topics */
   #topics-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 5%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 
   .overlay-image-topics {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     width: 40%;
   }
@@ -517,8 +644,15 @@ footer small a {
 
   #about-us .col-lg-6 {
     /* moves about us section in the middle of carousel height */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 
