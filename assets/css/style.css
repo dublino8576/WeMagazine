@@ -421,8 +421,8 @@ footer i:hover {
 }
 
 footer small a {
-  color: var(--text-color-dark);
-  font-size: 0.6rem;
+  color: black;
+  font-size: 1rem;
 }
 
 /* Media Queries */

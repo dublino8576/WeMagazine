@@ -47,7 +47,7 @@
             class="logo"
             src="assets/images/we_magazine_logo_light.webp"
             alt="WeMagazine Logo"
-            loading="lazy"
+            fetchpriority="high"
         /></a>
         <button
           class="navbar-toggler"
@@ -139,6 +139,7 @@
       </video>
       <!-- Text alternative for screen readers -->
       <span id="hero-video-desc" class="visually-hidden">
+        <!--bootstrap class permits to hide description but be readable to screen readers-->
         Background video of two girls writing in notebooks.
       </span>
 
