@@ -6,14 +6,8 @@
 3. [Features](#features)
 4. [Deployment Procedure](#deployment-procedure)
 5. [Screenshots](#screenshots)
-   - [Desktop View](#desktop-view)
-   - [Mobile View](#mobile-view)
-   - [HTML Validation](#html-validation)
-   - [CSS Validation](#css-validation)
-   - [Lighthouse Performance](#lighthouse-performance)
-6. [Bugs and Known Issues](#bugs-and-known-issues)
-7. [Attribution](#attribution)
-8. [AI Usage Declaration](#ai-usage-declaration)
+6. [Attribution](#attribution)
+7. [AI Usage Declaration](#ai-usage-declaration)
 
 
 Welcome! Click [here](https://dublino8576.github.io/WeMagazine/) to view WeMagazine's website, the online magazine by the people for the people!
@@ -101,5 +95,41 @@ Each small feature implemented had its dedicated branch, I have worked on one ti
 
 ## Screenshots
 
+#### Home Page
 
+<img width="2880" height="4766" alt="screenshot_index_laptop" src="https://github.com/user-attachments/assets/b8e5d1c3-dc62-4b0a-b0d3-096a4a660d62" />
 
+#### Daily Hacks
+
+<img width="1536" height="1784" alt="screenshot_daily_hacks_tablet" src="https://github.com/user-attachments/assets/8a8df167-6e90-40cf-b680-7991962179a8" />
+
+#### Article Page
+
+<img width="2880" height="2616" alt="screenshot_article_laptop" src="https://github.com/user-attachments/assets/b1b55606-7001-48c4-857b-7385f92322eb" />
+
+#### Submission Form
+
+<img width="2880" height="3126" alt="screenshot_submission_form_laptop" src="https://github.com/user-attachments/assets/021a022a-d9c9-4df8-b29c-3c9e8a5c666e" />
+
+## Attribution
+
+I have carefully selected assets of good quality which didn't require attribution, with the exception of the hero video I have included in the footer of the website.
+I took inspiration from the website [Dazed](https://www.dazeddigital.com/) for ideas such as the overlay of the cards in the topics section and the curtain effect of the footer.
+
+## AI Usage Declaration
+
+AI was not used to generate broad templates. 
+
+#### Copilot
+- AI was used for the generation of the article text
+- Detect syntax mistakes
+- Use of Intellicence for quick text-shadow effects
+- Explanation of aria-labels in different settings, tags and within particular components such as video tag or the form component
+- Understanding User Stories priorities and clarification of the difference between Acceptance Criteria and Developer Tasks
+
+#### ChatGpt
+- AI was used for generating a broad spectrum of color combinations based on the purpose and audience of the website
+- Generation of the logo from which I extrapolated to use for CTA buttons, navigation links
+
+#### ChatGpt/Gemini
+- Wireframes were generated after the completion of the website because of time constraints. 
