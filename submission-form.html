@@ -64,9 +64,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="index.html"
-                >Home</a
-              >
+              <a class="nav-link" href="index.html">Home</a>
             </li>
 
             <li class="nav-item dropdown">
@@ -117,9 +115,7 @@
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-custom-outline" type="submit">
-              Search
-            </button>
+            <button class="btn btn-custom-outline" type="submit">Search</button>
           </form>
         </div>
       </div>
@@ -127,8 +123,12 @@
     <header id="header-form" class="container my-5 pb-md-0">
       <div class="row justify-content-center">
         <div class="col-12 col-md-8">
-          <h1 class="text-center topics-fade-animation ">WeMagazine</h1>
-          <h2 class="work-sans-italic-subheading mt-5 mb-3 topics-fade-animation">share your voice</h2>
+          <h1 class="text-center topics-fade-animation">WeMagazine</h1>
+          <h2
+            class="work-sans-italic-subheading mt-5 mb-3 topics-fade-animation"
+          >
+            share your voice
+          </h2>
           <p class="topics-fade-animation">
             We welcome stories, opinions, and perspectives from everyday people.
             Use the form below to submit your article and help shape a magazine
@@ -140,71 +140,154 @@
         </div>
       </div>
     </header>
-    <main >
-      <section id="submission-form-section" class="container mt-5 mb-3">
-      <div class="row justify-content-center">
-      <div class="col-12  col-md-8">
-        <h2 class="work-sans-italic-subheading  mb-3 ps-3 ps-md-0 topics-fade-animation">article submission form</h2>
-      
-      <form class="row px-3 px-md-0 g-3 pb-5 topics-fade-animation" action="success-page.html" >
-        <div class="col-md-6">
-          <label for="inputName" class="form-label">Author's First Name*</label>
-          <input type="text" class="form-control" id="inputName" name="author_name" required />
-        </div>
-        <div class="col-md-6">
-          <label for="inputLastName" class="form-label">Author's Last Name*</label>
-          <input type="text" class="form-control" id="inputLastName" name="author_last_name" required />
-        </div>
-        <div class="col-12 col-md-8">
-          <label for="formFileAuthor" class="form-label">Author's Photo*</label>
-          <input class="form-control" type="file" id="formFileAuthor" name="uploadedFile" required>
-        </div>
-        <div class="col-12 col-md-8">
-          <label for="inputArticleTitle" class="form-label">Article's Title*</label>
-          <input type="text" class="form-control" id="inputArticleTitle" name="inputArticleTitle" required/>
-        </div>
-        
-        <div class="col-md-4">
-          <label for="topic_select" class="form-label">Article Topic*</label>
-          <select id="topic_select" name="topic" class="form-select" required>
-            <option value="" selected>Choose...</option>
-            <option value="history" >History</option>
-            <option value="wellness_fitness">Wellness&Fitness</option>
-            <option value="daily_hacks" >Daily Hacks</option>
-          </select>
-        </div>
-        <div class="col-12 col-md-8">
-          <label for="formFileArticle" class="form-label">Article's Photo*</label>
-          <input class="form-control" type="file" id="formFileArticle" name="uploadedFileArticle" required>
-        </div>
-        
-        <div class="col-12">
-          <label for="articleBody" class="form-label">Input Your Article Here!*</label>
-          <textarea class="form-control" id="articleBody" name="articleBody" minlength="3000" rows="5" required></textarea>
-          <span aria-label="required characters for article">Minimum 3000 characters</span>
-        </div>
-        <div class="col-12">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck" name="gridCheck" required/>
-            <label class="form-check-label" for="gridCheck">
-              I confirm this is my original content.
-            </label>
+    <main>
+      <section
+        id="submission-form-section"
+        style="margin-bottom: 3rem"
+        class="container mt-5"
+      >
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8">
+            <h2
+              class="work-sans-italic-subheading mb-3 ps-3 ps-md-0 topics-fade-animation"
+            >
+              article submission form
+            </h2>
+
+            <form
+              class="row px-3 px-md-0 g-3 pb-5 topics-fade-animation"
+              action="success-page.html"
+            >
+              <div class="col-md-6">
+                <label for="inputName" class="form-label"
+                  >Author's First Name*</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputName"
+                  name="author_name"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="inputLastName" class="form-label"
+                  >Author's Last Name*</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputLastName"
+                  name="author_last_name"
+                  required
+                />
+              </div>
+              <div class="col-12 col-md-8">
+                <label for="formFileAuthor" class="form-label"
+                  >Author's Photo*</label
+                >
+                <input
+                  class="form-control"
+                  type="file"
+                  id="formFileAuthor"
+                  name="uploadedFile"
+                  required
+                />
+              </div>
+              <div class="col-12 col-md-8">
+                <label for="inputArticleTitle" class="form-label"
+                  >Article's Title*</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputArticleTitle"
+                  name="inputArticleTitle"
+                  required
+                />
+              </div>
+
+              <div class="col-md-4">
+                <label for="topic_select" class="form-label"
+                  >Article Topic*</label
+                >
+                <select
+                  id="topic_select"
+                  name="topic"
+                  class="form-select"
+                  required
+                >
+                  <option value="" selected>Choose...</option>
+                  <option value="history">History</option>
+                  <option value="wellness_fitness">Wellness&Fitness</option>
+                  <option value="daily_hacks">Daily Hacks</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-8">
+                <label for="formFileArticle" class="form-label"
+                  >Article's Photo*</label
+                >
+                <input
+                  class="form-control"
+                  type="file"
+                  id="formFileArticle"
+                  name="uploadedFileArticle"
+                  required
+                />
+              </div>
+
+              <div class="col-12">
+                <label for="articleBody" class="form-label"
+                  >Input Your Article Here!*</label
+                >
+                <textarea
+                  class="form-control"
+                  id="articleBody"
+                  name="articleBody"
+                  minlength="3000"
+                  rows="5"
+                  required
+                ></textarea>
+                <span aria-label="required characters for article"
+                  >Minimum 3000 characters</span
+                >
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="gridCheck"
+                    name="gridCheck"
+                    required
+                  />
+                  <label class="form-check-label" for="gridCheck">
+                    I confirm this is my original content.
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="gridCheck2"
+                    name="gridCheck2"
+                    required
+                  />
+                  <label class="form-check-label" for="gridCheck2">
+                    I agree to the platform’s guidelines and terms.
+                  </label>
+                </div>
+              </div>
+              <div class="col-12 text-center mb-3 pt-3">
+                <button type="submit" class="btn btn-custom-filled">
+                  Become an Author!
+                </button>
+              </div>
+            </form>
           </div>
         </div>
-        <div class="col-12">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck2" name="gridCheck2" required />
-            <label class="form-check-label" for="gridCheck2">
-             I agree to the platform’s guidelines and terms.
-            </label>
-          </div>
-        </div>
-        <div class="col-12 text-center pt-3">
-          <button type="submit" class="btn btn-custom-filled">Become an Author!</button>
-        </div>
-        
-      </form>
-      </div>
       </section>
     </main>
     <footer class="mt-auto text-center">
