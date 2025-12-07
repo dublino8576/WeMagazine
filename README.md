@@ -16,7 +16,13 @@ Please go to the documentation folder to view extensive testing:
 - Lighthouse performance
 - HTML validator
 - CSS validator
-- AI generated wireframes 
+- Wireframes
+
+Homepage Desktop Performance
+<img width="1185" height="1159" alt="index_page_lighthouse_report_desktop-min" src="https://github.com/user-attachments/assets/d47da420-8075-485a-adbd-d0a1af3485b1" />
+
+Homepage Mobile Performance
+<img width="1182" height="1173" alt="mobile_report_indexPage-min" src="https://github.com/user-attachments/assets/fef50703-2919-4943-a9e9-4ac97fa26fe0" />
 
 
 ## Kanban Board Project Link
@@ -133,3 +139,4 @@ AI was not used to generate broad templates.
 
 #### ChatGpt/Gemini
 - Wireframes were generated after the completion of the website because of time constraints. 
+
