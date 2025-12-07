@@ -22,18 +22,37 @@ article {
 }
 
 .charts {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 90%;
 
   place-content: center;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 2rem;
 }
 
 .donut {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0;
   flex: 1 0;
   width: 100%;
   aspect-ratio: 1; /* turns it into a square */
+
+  background-image: -o-radial-gradient(
+      /* bands of color radiating from center like rays, when divided in sections and given transparent you can make your donut showing colors underneath and the rest the colour of the background */
+        var(--background-color) 0 40%,
+      transparent 40% 70%,
+      var(--background-color) 70%
+    ),
+    /* conic gradient makes slices of colors start from the center of the circle, start slice can start 60deg delayed rather than perpendicular to the centre */
+      conic-gradient(
+        from 60deg,
+        var(--pie-needs) 50%,
+        var(--pie-wants) 0 80%,
+        var(--pie-savings) 0
+      );
 
   background-image: radial-gradient(
       /* bands of color radiating from center like rays, when divided in sections and given transparent you can make your donut showing colors underneath and the rest the colour of the background */
@@ -52,16 +71,25 @@ article {
 
 .legends {
   font-size: 0.9rem;
+  -ms-flex-preferred-size: 100%;
   flex-basis: 100%; /* flexes till whole length */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-flow: wrap;
   flex-flow: wrap;
   gap: 1rem;
 }
 
 .legends span {
   position: relative;
+  -webkit-padding-start: 1.25rem;
   padding-inline-start: 1.25rem;
 }
 

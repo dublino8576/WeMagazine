@@ -124,18 +124,9 @@
     <!--Same size of video with overflow hidden removing extra video at the bottom to fit overlay-->
     <header id="hero" class="d-flex align-items-center">
       <div class="overlay"></div>
-      <video
-        src="assets/video/girls_writing_low_res.mp4"
-        autoplay
-        loop
-        muted
-        playsinline
-        id="hero-video"
-        type="video/mp4"
-        fetchpriority="high"
-        aria-hidden="true"
-      >
-        <source src="assets/video/girls_writing.mp4" type="video/mp4" />
+      <video autoplay loop muted playsinline id="hero-video" aria-hidden="true">
+        <source src="assets/video/girls_writing_low_res.mp4" />
+        <source src="assets/video/girls_writing_low_res.mp4" />
       </video>
       <!-- Text alternative for screen readers -->
       <span id="hero-video-desc" class="visually-hidden">
@@ -238,11 +229,9 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <div class="image-wrapper">
-                    <div
-                      aria-label="step 1"
-                      class="carousel-steps work-sans-normal"
-                    >
+                    <div class="carousel-steps work-sans-normal">
                       1
+                      <span class="visually-hidden">Step 1</span>
                     </div>
                     <img
                       src="assets/images/woman_writing_on_desk.webp"
@@ -251,11 +240,7 @@
                       loading="lazy"
                     />
                   </div>
-                  <div
-                    id="first-caption"
-                    aria-label="step 1"
-                    class="carousel-caption d-block"
-                  >
+                  <div id="first-caption" class="carousel-caption d-block">
                     <p>
                       Go to our post article form to insert your article in the
                       text area!
@@ -264,11 +249,9 @@
                 </div>
                 <div class="carousel-item">
                   <div class="image-wrapper">
-                    <div
-                      aria-label="step 2"
-                      class="carousel-steps work-sans-normal"
-                    >
+                    <div class="carousel-steps work-sans-normal">
                       2
+                      <span class="visually-hidden">Step 2</span>
                     </div>
                     <img
                       src="assets/images/woman_uploading_files.webp"
@@ -286,11 +269,9 @@
                 </div>
                 <div class="carousel-item">
                   <div class="image-wrapper">
-                    <div
-                      aria-label="step 3"
-                      class="carousel-steps work-sans-normal"
-                    >
+                    <div class="carousel-steps work-sans-normal">
                       3
+                      <span class="visually-hidden">Step 3</span>
                     </div>
                     <img
                       src="assets/images/sit_back_&_wait.webp"
@@ -308,11 +289,9 @@
                 </div>
                 <div class="carousel-item">
                   <div class="image-wrapper">
-                    <div
-                      aria-label="step 4"
-                      class="carousel-steps work-sans-normal"
-                    >
+                    <div class="carousel-steps work-sans-normal">
                       4
+                      <span class="visually-hidden">Step 4</span>
                     </div>
                     <img
                       src="assets/images/good_news.webp"
